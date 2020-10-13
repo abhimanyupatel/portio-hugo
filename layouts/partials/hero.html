@@ -32,7 +32,7 @@
             {{ .content | markdownify }}
           </div>
           <a type="button" class="btn btn-lg btn-primary btn-zoom"
-            href="{{ .buttonURL | absURL }}">{{ .buttonName }}</a>
+            href="{{ .buttonURL | relURL }}">{{ .buttonName }}</a>
         </div>
       </div>
       <div class="col-lg-6">
@@ -40,8 +40,8 @@
           <div class="figure-svg">
             <img src="images/hero/figure-svg.svg" alt="figure-svg" />
           </div>
-          <img src="{{ .image | absURL }}" alt="hero-image" style='
-                  -webkit-mask: url({{"images/hero/hero-mask-svg.png" | absURL }});
+          <img src="{{ .image | relURL }}" alt="hero-image" style='
+                  -webkit-mask: url(images/hero/hero-mask-svg.png);
                   -webkit-mask-repeat: no-repeat;
                   -webkit-mask-size: contain;
                   -webkit-mask-position: center center;
